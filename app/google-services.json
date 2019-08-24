@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "1092633172185",
+    "firebase_url": "https://drivers2-39224.firebaseio.com",
+    "project_id": "drivers2-39224",
+    "storage_bucket": "drivers2-39224.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1092633172185:android:bf65fb733f7627e7",
+        "android_client_info": {
+          "package_name": "driver.driver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1092633172185-u0n3j65fodk9kou3vqcela78ofeupean.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeyyiMtPTHJDB7k5MGVf3-pXnhTHVv8AY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1092633172185-u0n3j65fodk9kou3vqcela78ofeupean.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1092633172185:android:ba780a082587ded4",
+        "android_client_info": {
+          "package_name": "todriver.sendrequest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1092633172185-ca8idecknmu9nbpfesqqi6oc1sg07sic.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "todriver.sendrequest",
+            "certificate_hash": "82f2f752d72784fe4a542e0a1e09f783c1fef92b"
+          }
+        },
+        {
+          "client_id": "1092633172185-u0n3j65fodk9kou3vqcela78ofeupean.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeyyiMtPTHJDB7k5MGVf3-pXnhTHVv8AY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1092633172185-u0n3j65fodk9kou3vqcela78ofeupean.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

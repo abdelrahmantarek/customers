@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        android:gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/click_done_choice"
+            android:padding="5dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="bottom"
+            android:gravity="bottom"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="25dp"
+            style="@style/layout_button_style"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+
+            <TextView
+                android:id="@+id/XML_V"
+                android:text="@string/btn_show_all_service"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="19dp"
+                android:fontFamily="@font/abdo_b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+        </View>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

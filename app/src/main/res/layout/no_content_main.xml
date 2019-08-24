@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/map_activity"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/no_app_bar_main"
+    tools:context=".maps.MapsActivity">
+
+
+
+
+
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/no_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        class="com.google.android.gms.maps.SupportMapFragment" />
+
+
+
+
+    <ProgressBar
+        android:id="@+id/map_progress"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <ImageView
+        android:id="@+id/image_marker_place_map"
+        android:layout_marginBottom="30dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:src="@drawable/ic_location_green"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/layout_sheet_edit_top"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="todriver.sendrequest.Library.helper.TopSheetBehavior"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp">
+
+
+        <include
+            layout="@layout/sheet_edit_top"
+            >
+        </include>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/layout_sheet_tool_bar"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="todriver.sendrequest.Library.helper.TopSheetBehavior"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp">
+
+
+        <include
+            layout="@layout/tool_bar_sheet"
+            >
+        </include>
+
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/layout_sheet_all_service"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp">
+
+        <include
+            layout="@layout/no_sheet_all_service"
+            >
+        </include>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_btn_show_all_service"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp">
+
+
+        <include
+            layout="@layout/btn_choice_service"
+            >
+        </include>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/btn_sheet_send_company"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp">
+
+
+        <include
+            layout="@layout/btn_send_to_company"
+            >
+        </include>
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/layout_sheet_edit_bottom"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp">
+
+        <include
+            layout="@layout/btn_get_driver_bottom"
+            >
+        </include>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/layout_sheet_bancher"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp">
+
+
+        <include
+            layout="@layout/no_sheet_bancher"
+            >
+        </include>
+
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/layout_sheet_banzen"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp">
+
+
+        <include
+            layout="@layout/no_sheet_banzem"
+            >
+        </include>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/layout_sheet_better"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp">
+
+
+        <include
+            layout="@layout/no_sheet_bettery"
+            >
+        </include>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_sheet_sat7a"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp">
+
+
+        <include
+            layout="@layout/no_sheet_sat7a"
+            >
+        </include>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_sheet_sat7a_details"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp">
+
+
+        <include
+            layout="@layout/no_sheet_details_sat7a_3ady"
+            >
+        </include>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_sheet_sat7a_details_hedrolek"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp">
+
+
+        <include
+            layout="@layout/no_sheet_details_sat7a_hedrolek"
+            >
+        </include>
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/layout_sheet_winch"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp">
+
+
+        <include
+            layout="@layout/no_sheet_winch"
+            >
+        </include>
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/layout__sheet_transport_btween_city"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp">
+
+
+        <include
+            layout="@layout/no_sheet_transport_btween_city"
+            >
+        </include>
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/layout_sheet_taxi"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp">
+
+
+        <include
+            layout="@layout/no_sheet_taxi"
+            >
+        </include>
+
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/layout_sheet_key"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp">
+
+
+        <include
+            layout="@layout/no_sheet_key"
+            >
+        </include>
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/layout_sheet_request"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp">
+
+
+        <include
+            layout="@layout/sheet_request"
+            >
+        </include>
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/sheet_layout_service"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp">
+
+        <include
+            layout="@layout/service_sheet_from_bottom"
+            >
+        </include>
+    </LinearLayout>
+
+
+
+
+
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/no_map_floating_action_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="100dp"
+        fab:menu_animationDelayPerItem="55"
+        fab:menu_backgroundColor="@android:color/transparent"
+        fab:menu_buttonSpacing="0dp"
+        fab:menu_colorNormal="@color/colorPrimary"
+        fab:menu_colorPressed="@color/colorPrimaryDark"
+        fab:menu_colorRipple="#99d4d4d4"
+        fab:menu_fab_size="normal"
+        fab:menu_icon="@drawable/fab_add"
+        fab:menu_labels_colorNormal="#333"
+        fab:menu_labels_colorPressed="#444"
+        fab:menu_labels_colorRipple="#66efecec"
+        fab:menu_labels_cornerRadius="3dp"
+        fab:menu_labels_ellipsize="none"
+        fab:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
+        fab:menu_labels_margin="0dp"
+        fab:menu_labels_maxLines="-1"
+        fab:menu_labels_padding="8dp"
+        fab:menu_labels_position="left"
+        android:visibility="gone"
+        fab:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
+        fab:menu_labels_showShadow="true"
+        fab:menu_labels_singleLine="false"
+        fab:menu_labels_textColor="#f2f1f1"
+        fab:menu_labels_textSize="15sp"
+        fab:menu_openDirection="up"
+        fab:menu_shadowColor="#66aff198"
+        fab:menu_shadowRadius="4dp"
+        fab:menu_shadowXOffset="1dp"
+        fab:menu_shadowYOffset="4dp"
+        fab:menu_showShadow="true">
+
+
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/no_map_fab_change_color_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_public_white"
+            app:fab_colorNormal="@color/colorPrimary"
+            app:fab_colorPressed="@color/colorPrimaryDark"
+            fab:fab_label="@string/fab_Map_color"
+            fab:fab_size="mini" />
+
+
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/no_map_fab_get_location_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_gps_white"
+            app:fab_colorNormal="@color/colorPrimary"
+            app:fab_colorPressed="@color/colorPrimaryDark"
+            fab:fab_label="@string/fab_get_location"
+            fab:fab_size="mini" />
+
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+
+
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/service_map_floating_action_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="100dp"
+        fab:menu_animationDelayPerItem="55"
+        fab:menu_backgroundColor="@android:color/transparent"
+        fab:menu_buttonSpacing="0dp"
+        fab:menu_colorNormal="@color/colorPrimary"
+        fab:menu_colorPressed="@color/colorPrimaryDark"
+        fab:menu_colorRipple="#99d4d4d4"
+        fab:menu_fab_size="normal"
+        android:visibility="gone"
+        fab:menu_icon="@drawable/fab_add"
+        fab:menu_labels_colorNormal="#333"
+        fab:menu_labels_colorPressed="#444"
+        fab:menu_labels_colorRipple="#66efecec"
+        fab:menu_labels_cornerRadius="3dp"
+        fab:menu_labels_ellipsize="none"
+        fab:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
+        fab:menu_labels_margin="0dp"
+        fab:menu_labels_maxLines="-1"
+        fab:menu_labels_padding="8dp"
+        fab:menu_labels_position="left"
+        fab:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
+        fab:menu_labels_showShadow="true"
+        fab:menu_labels_singleLine="false"
+        fab:menu_labels_textColor="#f2f1f1"
+        fab:menu_labels_textSize="15sp"
+        fab:menu_openDirection="up"
+        fab:menu_shadowColor="#66aff198"
+        fab:menu_shadowRadius="4dp"
+        fab:menu_shadowXOffset="1dp"
+        fab:menu_shadowYOffset="4dp"
+        fab:menu_showShadow="true">
+
+
+
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/service_map_fab_call_the_client"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_call_white"
+            app:fab_colorNormal="@color/colorPrimary"
+            app:fab_colorPressed="@color/colorPrimaryDark"
+            fab:fab_label="@string/fab_contact_your_service_providor"
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/service_map_fab_location_the_client"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_person_location_white"
+            app:fab_colorNormal="@color/colorPrimary"
+            app:fab_colorPressed="@color/colorPrimaryDark"
+            fab:fab_label="@string/fab_service_providor_location"
+            fab:fab_size="mini" />
+
+
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/service_map_fab_get_location_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_gps_white"
+            app:fab_colorNormal="@color/colorPrimary"
+            app:fab_colorPressed="@color/colorPrimaryDark"
+            fab:fab_label="@string/fab_get_location"
+            fab:fab_size="mini" />
+
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/service_map_fab_show_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_setting_white"
+            fab:fab_label="@string/fab_service_details"
+            app:fab_colorNormal="@color/colorPrimary"
+            app:fab_colorPressed="@color/colorPrimaryDark"
+            fab:fab_size="mini" />
+
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+
+
+
+
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>
